@@ -10,7 +10,7 @@ contract KaleidoERC20Mintable is ERC20, AccessControl {
         _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
         _setupRole(MINTER_ROLE, _msgSender());
         _setupDecimals(decimals);
-        _mint(_msgSender(), initialSupply * 10**uint(super.decimals()));
+        _mint(_msgSender(), initialSupply * 100000000**uint(super.decimals()));
     }
 
     function mint(address to, uint256 amount) public {
